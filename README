@@ -1,0 +1,41 @@
+Scamander is an Elector (or Elektuur) SC/MP emulator.
+
+Why does the world need another SC/MP emulator? It probably doesn't... but this one has the advantages of being simple and self contained making it easier to mess about with as well as being (uniquely?) able to re-create the "Singing SC/MP" tunes [1] as released on ESS record 2...
+
+https://www.discogs.com/No-Artist-Elektor-Software-Service/release/6132948
+
+Scamander is written for Linux and depends on the SFML library. It can be compiled with:
+
+g++ -o scamander ./scamander.cpp scmp.cpp -lsfml-graphics -lsfml-window -lsfml-system
+
+The emulator also requires the Elbug software which was published in Elektor magazine [2] or is available to download from https://wowroms.com/en/roms/mame/elektor-sc-mp/81676.html among other places. This should be in three files (elbug.001, elbug.002 and elbug.003) with 0x200 bytes in each. More information on using Elbug is available in the February 1979 edition [3].
+
+Keys mappings are as follows:
+0-9 and A-F keys are as on PC keyboard.
+Command keys are mapped to "F" keys...
+
+F1 = C0 = UP
+F2 = C1 = DOWN
+F3 = C2 = CPU REGISTER
+F4 = C3 = BLOCK TRANSFER
+F5 = C4 = CASSETTE (No cassette hardware is emulated)
+F6 = C5 = SUBTRACTION
+F7 = C6 = MODIFY
+F8 = C7 = RUN
+
+F9 = Halt/Resume
+F10 = Reset
+
+F11 = Change Colour - will cycle through red, green and blue
+F12 = Exit emulator
+
+The halt LED, which on a real machine would be part of the halt key, is shown as a square in the bottom right of the display.
+
+Also included is a "makepcm" tool to help convert the "singing" of the emulator into standard-compliant audio files, and a collection of other SC/MP programs from the pages of Elektor.
+
+References
+[1] Elektor (1978), "Singing SC/MP" in Elektor Vol. 4 No. 12 pp. 12-08 - 12-09
+[2] Husccitt, H. (1978), "Experimenting with the SC/MP (5)" in Elektor Vol. 4 No. 3 pp. 3-03 - 3-07
+[3] Huschitt, H. (1979), "Using Elbug" in Elektor Vol. 5 No. 2 pp 2-32 - 2-38
+
+All of the above can be accessed at: https://worldradiohistory.com/Elektor.htm
